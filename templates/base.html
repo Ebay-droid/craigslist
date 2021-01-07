@@ -1,11 +1,69 @@
+
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <title>My Craigslist</title>
 </head>
 <body>
-  <h2>Does it work?</h2>
+  <nav>
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">My Craigslist</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>What would you  want to search for here on My-Craigslist</h2>
+    <div class="row">
+
+      <div class="col s4">
+        <div class="center">
+          <i class="large material-icons dp48" style="color: aqua;">ac_unit</i>
+          <p>fast craigslist scrapper</p>
+          <p class="light center">scrape away right here with a beautiful GUI </p>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="center">
+          <i class="large material-icons dp48" style="color: chartreuse;">filter_list</i>
+          <p>Filter through your searches</p>
+          <p class="light center">Built in functionality to filter baased on pricing</p>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="center">
+          <i class="large material-icons dp48" style="color: rgb(86, 97, 160);">flare</i>
+          <p>Craigslist with a much lovelier UI</p>
+          <p class="light center">Built with love.</p>
+        </div>
+      </div>
+    </div>
+    
+    <form action="{% url 'new_search'%}" method="post">
+      {%csrf_token%}
+      <input type="text" name="search"  placeholder="Search">
+      <input class="btn " type="submit" name="Submit">
+    </form>
+  
+
+  
+
+  {%block content%}
+
+  {%endblock content%}
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
