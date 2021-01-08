@@ -1,0 +1,13 @@
+.card-image{
+  height: 250px;
+  overflow: hidden;
+}
+.card{
+  height: 500px;
+}
+body{
+  background-image: radial-gradient(rgba(192, 158, 158, 0.863),wheat,khaki,darkslategrey);
+}
+nav{
+  background-color: antiquewhite;
+}
