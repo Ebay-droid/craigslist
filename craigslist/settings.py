@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+import django_heroku
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,7 @@ TEMPLATE_DIR =os.path.join(BASE_DIR,'templates')
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5959p@95lm=g7v$c9&10ry4mp1@z8yq2ty^pi%y5m)t0$fzr5y'
+SECRET_KEY = 'ebenezer'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -120,3 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+
+
+
+django_heroku.settings(locals())
